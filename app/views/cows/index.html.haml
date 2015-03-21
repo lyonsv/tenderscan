@@ -1,0 +1,19 @@
+%h1 Listing cows
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cows.each do |cow|
+      %tr
+        %td= link_to 'Show', cow
+        %td= link_to 'Edit', edit_cow_path(cow)
+        %td= link_to 'Destroy', cow, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cow', new_cow_path
