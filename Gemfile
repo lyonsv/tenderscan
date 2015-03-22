@@ -19,6 +19,9 @@ gem 'pg'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'httparty'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

@@ -1,19 +1,37 @@
-%h1 Listing cows
+%section.main-table
 
-%table
-  %thead
-    %tr
-      %th
-      %th
-      %th
+  %h1 Listing cows
 
-  %tbody
-    - @cows.each do |cow|
+  %table 
+    %thead
       %tr
-        %td= link_to 'Show', cow
-        %td= link_to 'Edit', edit_cow_path(cow)
-        %td= link_to 'Destroy', cow, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td
+          %a Select Cow
+        %td
+          %a Timestamp        
+        %td
+          %a Cow ID
+        %td
+          %a PH
+        %td
+          %a IMP
+        %td
+          %a NIR
+        %td
+          %a DFD
+        %td
+          %a Tenderness Score
+    %tbody
+      - @cows.each do |cow|     
+        %tr 
+          %td
+            %input{type:"checkbox"} 
+          %td= cow["timestamp"]
+          %td= cow["cow_id"]
+          %td= cow["ph"]
+          %td= cow["imp"]
+          %td= cow["nir"]
+          %td= cow["dfd_0"]
+          %td= cow["score"]
 
-%br
 
-= link_to 'New Cow', new_cow_path

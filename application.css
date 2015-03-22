@@ -1,0 +1,267 @@
+//
+// Font Imports
+//
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+// 
+// Resets from Normalize, Framework from http://bourbon.io, Grids from http://neat.bourbon.io, 
+// and SASS scaffold from http://bitters.bourbon.io
+//
+@import "base/reset";
+@import "bourbon";
+@import "neat";
+//
+//Mixins; breakpoints with @include breakpoint($point), $mini - 679px, $small - 680px, $medium - 1120px, $large - 1820px;
+//
+@import "base/mixins/vertical_align";
+@import "base/mixins/breakpoints";
+// 
+//Files are to be organised by SMACSS, base/ files provided by Bitters Gem.
+//
+@import "base/variables";
+@import "base/grid-settings";
+@import "base/typography";
+@import "base/forms";
+@import "base/buttons";
+@import "base/social-button";
+@import "base/jquery.remodal";
+//
+//Layout files
+//
+@import "layout/layout";
+@import "layout/dubstarts-forms";
+//
+// Sections
+//
+@import "partials/white-section";
+@import "partials/dark-section";
+@import "partials/accent-section";
+@import "partials/dubstarts-hero";
+@import "partials/about-dubstarts";
+@import "partials/footer";
+@import "partials/company";
+@import "partials/navigation";
+@import "partials/jobs";
+@import "partials/user";
+@import "partials/signup";
+//#@import "partials/company-index";
+@import "partials/dashboard";
+@import "partials/slide_up_menu";
+@import "partials/jobs-index";
+//
+//Modal Window
+//
+@import "partials/modal";
+@import "partials/scroller";
+@import "partials/dropdown"; // taken from thoughbot refills
+@import "partials/tabs-refills"; // taken from thoughbot refills
+
+body{
+  background:rgb(224, 224, 224);
+  overflow:hidden;
+  height:100%;
+}
+
+html{
+  height:100%;
+}
+
+.tag{
+display:inline-block;
+color:$dark-gray;
+background:#efefef;
+padding:0.3em 1em;
+font-size:0.8em;
+border-radius:2px;
+margin-top:2px;
+}
+
+.bar {
+    height: 18px;
+    background: $blue;
+}
+
+fieldset#resume{
+input[type=file]{
+  color:transparent;
+}
+}
+
+.contacts_container{
+  @include pad(3em 1em);   
+  overflow:scroll;
+  text-align: left;
+  section{
+  @include outer-container;
+  }
+  .l-form{
+  padding:0;
+  margin:0;
+  }
+  h1{
+    padding-bottom:1em;
+    text-align:center;
+    font-weight:100;
+  }
+  #contacts{
+  @include span-columns(8)
+  }
+  aside{
+  @include span-columns(3);
+  padding-top:0;
+  }
+  img{
+    @include span-columns(1); 
+    max-width:100px;
+    border-radius:1000px;
+    box-shadow:2px 2px #efefef;
+  }
+  .description{
+    @include span-columns(11); 
+  }
+  .actions{
+    @include span-columns(2); 
+  }
+  ul{
+    font-size:0.8em;
+  }
+  a{
+  color:$base-font-color;
+  }
+}
+
+.contact-profile{
+  @include pad(3em 2em);
+  @include outer-container;  
+  overflow:scroll;
+  text-align: left;
+  section{
+  @include span-columns(7)
+  }
+  .profile-picture{
+    @include span-columns(2);  
+  }
+  img{
+    max-width:150px;
+    border-radius:1000px;
+    box-shadow:2px 2px #efefef;
+  }
+  ul{
+    font-size:0.8em;
+  }
+  .company{
+    @include pad(2em 0)
+  }
+  aside{
+    @include span-columns(3);   
+  padding:0  
+  }
+}
+
+
+.left-sidebar{
+ @include pad(1em);
+ background:whitesmoke;
+ width:200px;
+ position:absolute;
+ left:0;
+ border-right:  1px solid rgba(182, 177, 177, 0.55);
+ height:100%;
+ b{
+  margin-bottom:40px;
+ }
+ 
+ input{
+ display:inline;
+ }
+ .name-test{
+  margin:10px;
+ }
+ form{
+ }
+ .selected input[type="radio"]{
+   display:inline;
+   padding:1px;
+   font-size: 5px;
+ }
+ .selected input[type="text"]{
+  max-width:300px;
+ }
+ .selected .block{
+  display:block;
+ }
+ .selected{
+  padding:1em;
+ }
+}
+
+table{
+  overflow:scroll;
+  table-layout:fixed;
+  display:block;
+}
+
+tbody{
+  border:1px solid #c9d7df;
+}
+td {
+  font-size:14px;
+  padding:10px;
+  min-width:100px;
+}
+tbody td{
+  background:white;
+  border:1px solid rgb(249, 249, 249);
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+thead{
+  font-weight:800;
+}
+
+.main-table{
+  .selected-blue{
+    border-left: 5px $blue solid;
+  }
+  .selected-green{
+    border-left: 5px green solid;
+  }
+  
+  position:absolute;
+  right:0;
+  height:100%;
+  width:84%;
+  overflow:hidden;
+  overflow-y:scroll;
+  .numbers{
+    display:block;
+    margin-top:20px;
+    width:100%;
+    padding-right:1em;
+    button{
+      float:right;
+      margin-top:2em;
+    }
+  }
+  .number{
+    display:inline-block;
+    p{
+      background:white;
+      font-size:1.5em;
+      padding:.5em 1em;
+    }
+  }
+  
+}
+
+.logo{
+  img{
+    width:100px;
+    margin:7px;
+  }
+}
+
+td a{
+  text-decoration:underline;
+  color:$base-font-color;
+}

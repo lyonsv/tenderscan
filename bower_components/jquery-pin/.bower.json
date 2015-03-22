@@ -1,0 +1,15 @@
+{
+  "name": "jquery-pin",
+  "homepage": "https://github.com/webpop/jquery.pin",
+  "version": "1.0.3",
+  "_release": "1.0.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.3",
+    "commit": "e5931dbc78ee39da949f085d58e93763fec76937"
+  },
+  "_source": "git://github.com/webpop/jquery.pin.git",
+  "_target": "~1.0.3",
+  "_originalSource": "jquery-pin",
+  "_direct": true
+}

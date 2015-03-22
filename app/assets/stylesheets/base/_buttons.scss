@@ -1,0 +1,135 @@
+//
+// Button Default Styles
+//
+.btn-mini, .btn-sml, .btn-big, .btn-huge {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -khtml-border-radius: 2px;
+  /** Prevent click and drag text selection **/
+  -webkit-user-select: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /** Disable tap highlight on iOS **/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  .btn-mini:hover, .btn-mini:focus, .btn-mini:active, .btn-sml:hover, .btn-sml:focus, .btn-sml:active, .btn-big:hover, .btn-big:focus, .btn-big:active, .btn-huge:hover, .btn-huge:focus, .btn-huge:active {
+    text-decoration: none;
+    outline: none; }
+//
+// Button Sizes Set Through Font Size and Padding
+//
+.btn-mini {
+  font-size: 10px;
+  padding: 10px 14px; }
+
+.btn-sml {
+  font-size: 11px;
+  padding: 12px 17px; }
+
+.btn-big {
+  font-size: 12px;
+  padding: 17px 30px; }
+
+.btn-huge {
+  font-size: 13px;
+  padding: 23px 44px; }
+
+  
+  
+.btn-hollow {
+  background: none;
+  border: 2px solid;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .btn-hollow.btn-accent {
+    border-color: $button-accent;
+    color: $button-accent; }
+    .btn-hollow.btn-accent:hover, .btn-hollow.btn-accent:focus {
+      border-color: $button-accent-border;
+      color: $button-accent-border; }
+  .btn-hollow.btn-complement {
+    border-color: $button-complement-border;
+    color: $button-complement; }
+    .btn-hollow.btn-complement:hover, .btn-hollow.btn-complement:focus {
+      border-color: $button-complement-hover;
+      color: $button-complement-hover; }
+  .btn-hollow.btn-base {
+    border-color: $button-base-border;
+    color: $button-base; }
+    .btn-hollow.btn-base:hover, .btn-hollow.btn-base:focus {
+      border-color: $button-base-border;
+      color: $button-base; }
+  .btn-hollow.btn-transparent {
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #fff;
+    color: rgba(255, 255, 255, 0.85); }
+    .btn-hollow.btn-transparent:hover, .btn-hollow.btn-transparent:focus {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff; }
+
+.btn-solid {
+  border: 2px solid; }
+  .btn-solid:active {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+    -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset; }
+  .btn-solid.btn-accent {
+    background: $button-accent;
+    border-color: $button-accent;
+    color: #fff; }
+    .btn-solid.btn-accent:hover, .btn-solid.btn-accent:focus {
+      background: $button-accent-border;
+      border-color: $button-accent-border; }
+    .btn-solid.btn-accent:active {
+      background: $button-accent;
+      border-color: #3da8e2;
+      border-bottom-color: $button-accent; }
+  .btn-solid.btn-complement {
+    background: $button-complement;
+    border-color: $button-complement-border;
+    color: #fff; }
+    .btn-solid.btn-complement:hover, .btn-solid.btn-complement:focus {
+      background: $button-complement-hover;
+      border-color: $button-complement-border; }
+    .btn-solid.btn-complement:active {
+      background: $button-complement;
+      border-color: $button-complement-border;
+      border-bottom-color: $button-complement; }
+  .btn-solid.btn-base {
+    background: $button-base;
+    border-color: $button-base-border;
+    color: #fff; }
+    .btn-solid.btn-base:hover, .btn-solid.btn-base:focus {
+      background:$button-base-hover; 
+      border-color: $button-base-hover; }
+    .btn-solid.btn-base:active {
+      background: $button-base-hover;
+      border-color: $button-base-hover;
+      border-bottom-color: $button-base-hover; }
+  .btn-solid.btn-transparent {
+    background: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff; }
+    .btn-solid.btn-transparent:hover, .btn-solid.btn-transparent:focus {
+      background: rgba(255, 255, 255, 0.35); }
+  
+
+.btn-disabled, .btn-sml[disabled], .btn-big[disabled], .btn-huge[disabled] {
+  background: #e1e4e9 !important;
+  box-shadow: none !important;
+  border-color: #e1e4e9 !important;
+  text-shadow: none !important;
+  color: #b6bbc8 !important;
+  cursor: default; }
+
+

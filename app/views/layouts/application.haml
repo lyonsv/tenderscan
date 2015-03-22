@@ -1,0 +1,45 @@
+!!!
+%html
+  %head
+    %title TenderScan
+    %link{:rel => "stylesheet", :href => "//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" }
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %nav.main-navigation
+      %h1.fl TenderScan 
+
+      .settings
+        .fa.fa-gear
+        .fa.fa-caret-down
+    %nav.sub-navigation
+      %ul
+        %li.active Create Order 
+        %li Reports
+     
+    %section.left-sidebar
+      %p
+        .fa.fa-tasks
+        %b Select Batch 
+      %form
+        %b Testing Stage:
+        .filter.l-panel
+          %input{type:"checkbox"} 
+            1 Hour
+        .filter
+          %input{type:"checkbox"} 
+            5 Days
+        .filter
+          %input{type:"checkbox"} 
+            14 Weeks
+      .line{style: "background:#efefef; width:100%; height:1px;"} 
+      %form 
+        .filter
+          %input{type:"checkbox"} 
+            Cut
+        .filter
+          %input{type:"checkbox"} 
+            Date    
+
+    = yield

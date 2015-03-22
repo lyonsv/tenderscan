@@ -1,16 +1,16 @@
 class CowsController < ApplicationController
   before_action :set_cow, only: [:show, :edit, :update, :destroy]
-
   # GET /cows
   # GET /cows.json
   def index
-    @cows = Cow.all
+    @cows = [{"cow_id"=>"2", "timestamp"=>"2015-02-21T17:46:59.000Z", "ph"=>0.1, "imp"=>0.2, "nir"=>0.2, "dfd_0"=>0, "score"=>0.5}, {"cow_id"=>"2", "timestamp"=>"2015-03-01T10:41:32.000Z", "ph"=>0.1, "imp"=>0.2, "nir"=>0.2, "dfd_0"=>0, "score"=>0.5}, {"cow_id"=>"2", "timestamp"=>"2015-03-17T19:47:59.000Z", "ph"=>0, "imp"=>0.2, "nir"=>0.2, "dfd_0"=>1, "score"=>0.4}, {"cow_id"=>"2", "timestamp"=>"2015-02-23T08:06:55.000Z", "ph"=>0.25, "imp"=>0.2, "nir"=>0.2, "dfd_0"=>0, "score"=>0.65}]
   end
 
   # GET /cows/1
   # GET /cows/1.json
   def show
   end
+
 
   # GET /cows/new
   def new
