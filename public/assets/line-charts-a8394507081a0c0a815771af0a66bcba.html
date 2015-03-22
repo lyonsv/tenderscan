@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <title>Line Charts and Options</title>
+
+    <link class="include" rel="stylesheet" type="text/css" href="../jquery.jqplot.min.css" />
+    
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shCoreDefault.min.css" />
+    <link type="text/css" rel="stylesheet" href="syntaxhighlighter/styles/shThemejqPlot.min.css" />
+  
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+    <script class="include" type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+   
+</head>
+<body>
+    
+  
+
+
+<div id="chart1" style="height:300px; width:500px;"></div>
+
+
+
+
+
+<div id="chart2" style="height:300px; width:500px;"></div>
+
+
+<div id="chart3" style="height:300px; width:500px;"></div>
+
+
+
+  
+
+  
+<script  type="text/javascript">
+var json = new Object();
+	
+
+
+$(document).ready(function(){
+  var plot2 = $.jqplot ('chart1', [[['17-January-15',0.2],['17-January-15',0.1],['20-January-15',0.3],['11-February-15',0.6]]], {
+      title: 'Ph',
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+
+      seriesDefaults: {
+          rendererOptions: {
+              smooth: true
+          }
+      },
+      axes: {
+        
+        xaxis: {
+          label: "Time",
+          renderer:$.jqplot.DateAxisRenderer,
+	  tickOptions:{
+            formatString:'%b&nbsp;%#d'
+          } 
+          
+        },
+        yaxis: {
+          label: "Ph"
+        }
+      }
+    });
+});
+</script>
+<script  type="text/javascript">
+var json = new Object();
+	
+
+
+$(document).ready(function(){
+  var plot2 = $.jqplot ('chart2', [[['17-January-15',0.2],['17-January-15',0.1],['20-January-15',0.3],['11-February-15',0.6]]], {
+      title: 'Nir',
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+
+      seriesDefaults: {
+          rendererOptions: {
+              smooth: true
+          }
+      },
+      axes: {
+        
+        xaxis: {
+          label: "Time",
+          renderer:$.jqplot.DateAxisRenderer,
+	  tickOptions:{
+            formatString:'%b&nbsp;%#d'
+          } 
+          
+        },
+        yaxis: {
+          label: "Nir"
+        }
+      }
+    });
+});
+</script>
+    
+<script  type="text/javascript">
+var json = new Object();
+	
+
+
+$(document).ready(function(){
+  var plot2 = $.jqplot ('chart3', [[['17-January-15',0.2],['17-January-15',0.1],['20-January-15',0.3],['11-February-15',0.6]]], {
+      title: 'Impedance',
+      axesDefaults: {
+        labelRenderer: $.jqplot.CanvasAxisLabelRenderer
+      },
+
+      seriesDefaults: {
+          rendererOptions: {
+              smooth: true
+          }
+      },
+      axes: {
+        
+        xaxis: {
+          label: "Time",
+          renderer:$.jqplot.DateAxisRenderer,
+	  tickOptions:{
+            formatString:'%b&nbsp;%#d'
+          } 
+          
+        },
+        yaxis: {
+          label: "Ohm"
+        }
+      }
+    });
+});
+</script>
+  
+
+<!-- End example scripts -->
+
+<!-- Don't touch this! -->
+
+
+    <script class="include" type="text/javascript" src="../jquery.jqplot.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shCore.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushJScript.min.js"></script>
+    <script type="text/javascript" src="syntaxhighlighter/scripts/shBrushXml.min.js"></script>
+<!-- End Don't touch this! -->
+
+<!-- Additional plugins go here -->
+
+  <script class="include" type="text/javascript" src="../plugins/jqplot.canvasTextRenderer.min.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.canvasAxisLabelRenderer.min.js"></script>
+<script type="text/javascript" src="../plugins/jqplot.dateAxisRenderer.min.js"></script>
+<!-- End additional plugins -->
+
+       
+    </div>
+    <script type="text/javascript" src="example.min.js"></script>
+
+</body>
+
+
+</html>

@@ -1,6 +1,7 @@
 %section.main-table
 
   %h1 Listing Measurements
+
   %table 
     %thead
       %tr
@@ -20,17 +21,18 @@
           %a DFD
         %td
           %a Tenderness Score
-    %tbody
-      - @cows.each do |cow|     
+    %tbody#measurements
+      - @measurements.each do |measurement|     
         %tr 
           %td
             %input{type:"checkbox"} 
-          %td= link_to cow["timestamp"], cows_display_path
-          %td= cow["cow_id"]
-          %td= cow["ph"]
-          %td= cow["imp"]
-          %td= cow["nir"]
-          %td= cow["dfd_0"]
-          %td= cow["score"]
+          %td= measurement["timestamp"]
+          %td= measurement["cow_id"]
+          %td= measurement["ph"]
+          %td= measurement["imp"]
+          %td= measurement["nir"]
+          %td= measurement["dfd_0"]
+          %td= measurement["score"] 
+
 
 
